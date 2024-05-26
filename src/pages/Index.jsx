@@ -1,5 +1,5 @@
-import { Box, Container, VStack, Text, Heading, Grid, GridItem, Image, Link, Flex, Spacer, HStack, Button } from "@chakra-ui/react";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Box, Container, VStack, Text, Heading, Grid, GridItem, Image, Link, Flex, Spacer, HStack, Button, Input, InputGroup, InputRightElement, IconButton } from "@chakra-ui/react";
+import { FaFacebook, FaTwitter, FaInstagram, FaSearch } from "react-icons/fa";
 
 const Index = () => {
   return (
@@ -7,6 +7,16 @@ const Index = () => {
       {/* Navigation Bar */}
       <Flex as="nav" bg="blue.800" color="white" p={4} align="center">
         <Heading size="md">ElectroShop</Heading>
+        <InputGroup maxW="400px" mr={4}>
+          <Input placeholder="Search for products..." />
+          <InputRightElement>
+            <IconButton
+              aria-label="Search"
+              icon={<FaSearch />}
+              onClick={() => console.log("Search button clicked")}
+            />
+          </InputRightElement>
+        </InputGroup>
         <Spacer />
         <HStack spacing={8}>
           <Link href="#">Home</Link>
